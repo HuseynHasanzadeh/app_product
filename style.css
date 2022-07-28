@@ -3,9 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
 a:hover{
     text-decoration: none;
-  
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -40,9 +43,16 @@ header{
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
+    border: 1px solid #000;
+
+    display: block;
+    transition: 0.3s ease;
 }
+
+
 .header__buttons:hover{
-    color: #fff;
+    color: #000;
+    background-color: #fff;
 }
 nav ul {
     display: flex;
@@ -56,6 +66,8 @@ nav ul li{
 }
 nav ul li a {
     text-decoration: none;
+    display: block;
+
     color: #000;
 }
 nav ul li a:hover{
@@ -104,6 +116,7 @@ nav ul li a:hover{
     padding: 10px 25px;
     background: #222222;
     letter-spacing: 2px;
+    border: 1px solid #000;
     color: #fff;
     text-transform: uppercase;
     border-radius: 4px;
@@ -112,7 +125,8 @@ nav ul li a:hover{
 
 
 .about__buttons a:hover{
-    color: #fff;
+    color: #000;
+    background-color: #fff;
 }
 
 
@@ -685,8 +699,8 @@ max-width: 589px;
         right: 169px;
     }
 
-    .about__buttons{
-    }
+    /* .about__buttons{
+    } */
   }
 
   @media screen and (max-width: 375.99px) {
