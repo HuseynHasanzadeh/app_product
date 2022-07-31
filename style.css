@@ -49,6 +49,13 @@ header{
     transition: 0.3s ease;
 }
 
+.menu__bar{
+    display: none;
+    font-size: 22px;
+    margin-left: auto;
+
+    position: relative;
+}
 
 .header__buttons:hover{
     color: #000;
@@ -74,12 +81,89 @@ nav ul li a:hover{
     color: #000;
 }
 /* end styles header */
+/* starts styles aside */
+
+.menu__aside{
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: none;
+    right: 0;
+}
+
+.close__btn{
+    position: absolute;
+left: 15px;
+top: 20px;
+}
+.close__btn i{
+    font-size: 32px;
+}
+
+.menu__active{
+    display: block;
+    transition: 2s ease !important;
+
+}
+
+.menu__inner{
+    margin-top: 100px;
+    position: relative;
+}
+
+.menu__inner ul li{
+    list-style-type: none;
+    text-align: center;
+    margin: 10px;
+}
+
+.buttons{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.buttons a{
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 10px 15px;
+}
+
+.menu__inner ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 22px;
+}
+/* starts styles aside */
+
 /* starts styles about */
+
+
 .about{
     margin-top: 100px;
     max-width: 960px;
 }
 
+.feature__content{
+    background-color:#F2F2F2;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);;
+    padding: 48px;
+    margin-top: -200px;
+    position: relative;
+    z-index: 2;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+.feature__content img{
+    max-width: 64px;
+position: absolute;
+transform:translate(-50%, -120%);
+}
 
 .about__box{
     max-width: 420px;
@@ -181,11 +265,11 @@ nav ul li a:hover{
     z-index: 2;
     border-radius: 0px 0px 20px 20px;
 }
-.features__content img{
+.feature__content img{
     position: absolute;
     max-width: 64px;
-    top: -72px;
-    right: 140px;
+    transform:translate(-50%, -120%);
+
 }
 .features__content h5{
     font-size: 24px;
@@ -580,31 +664,27 @@ max-width: 589px;
 /* media query */
 
 
-
-
-
-@media screen and (max-width: 1200px) {
-    .features__content img {
-       
-        right: 114px;
-    }
-  }
-
   @media screen and (max-width: 992px) {
-    .features__content img {
-       
-        right: 135px;
+
+    .about__content h1{
+        font-size: 48px;
+    }
+    
+    .about__tel img{
+        margin-left: 100px;
     }
   }
 
 
   @media screen and (max-width: 768.99px) {
+    
     .header__menu{
         display: none;
+        font-size: 22px;
+        color: #000;
     }
     
    
-
     .about__tel{
         padding-top: 20px;
     }
@@ -620,10 +700,16 @@ max-width: 589px;
    
 
   @media screen and (max-width: 767.99px) {
-    .features__content img {
-       
-        right: 225px;
+    .menu__bar{
+        display: block;
+
     }
+    .fa-bars{
+        right: 20px;
+        top: 5px;
+        position: relative;
+    }
+   
     .header__menu{
         display: none;
     }
@@ -652,33 +738,17 @@ max-width: 589px;
   .about__tel img{
     margin-left: 0px;
   }
-    .features__content img {
-       
-        right: 244px;
-    }
+    
   }
 
-  @media screen and (max-width: 545.99px) {
-    .features__content img {
-       
-        right: 230px;
-    }
-  }
+  
   @media screen and (max-width: 517.99px) {
     .about__tel img{
         margin-left: 0px;
       }
-    .features__content img {
-       
-        right: 217px;
-    }
+
   }
-  @media screen and (max-width: 500.99px) {
-    .features__content img {
-       
-        right: 207px;
-    }
-  }
+
 
 
 
@@ -688,27 +758,11 @@ max-width: 589px;
     .about__buttons a:nth-child(2) {
         margin-left: 0px;
     }
-    .features__content img {
-       
-        right: 198px;
-    }
+    
   }
 
-  @media screen and (max-width: 425.99px) {
-    .features__content img {
-        right: 169px;
-    }
+  
 
-    /* .about__buttons{
-    } */
-  }
-
-  @media screen and (max-width: 375.99px) {
-    .features__content img {
-       
-        right: 144px;
-    }
-  }
   @media screen and (max-width: 350.99px) {
     .about__buttons a {
         padding: 10px 15px;
@@ -717,10 +771,6 @@ max-width: 589px;
     .about__tel img{
         margin-left: 0px;
       }
-    .features__content img {
-       
-        right: 116px;
-    }
   } 
 
 
